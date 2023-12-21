@@ -1,0 +1,91 @@
+@import "variaveis.less";
+@breakpointMobile:~"(max-width:767px)";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+li{
+    list-style: none;
+    &-a{
+        text-decoration: none;
+    }
+}
+
+body{
+    background-color: #cores[corDefundo];
+}
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin:0 auto;
+}
+header{
+    text-align: center;
+    img{
+        border-radius: 50%;
+        margin-top: 20px;
+        width: 100px;
+        height: 100px;
+    }
+    h1{
+        color: @textPrincipal;
+        margin-top: 10px;
+    }
+    h2{
+        color: @textSecundario;
+        margin-top: 10px;
+        opacity: .7;
+    }
+    p{
+        color: @textSecundario;
+        margin-top: 10px;
+    }
+}
+.social-media{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    max-width: 640px;
+    margin:0 auto;
+    padding: 40px;
+
+    img{
+        
+        &:hover{
+            transform: scale(1.3);
+        }  
+    }    
+}
+.buttons{
+   
+    
+
+    a{
+        display: block;
+    background-color: #cores[corDebotao];
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 16px;
+    text-decoration: none;
+    border-radius: 20px;
+    border: 1px solid #706fd3;
+    color: @textPrincipal;
+    transition: all ease .5s;
+
+    &:hover{
+        background-color: transparent;
+        color: @textSecundario;
+    }
+    }
+      
+}
+@media @breakpointMobile{
+    .container{
+        max-width: 90%;
+    }
+}
